@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Depeche Node&#43;&#43;</title>
-    <link>https://www.example.com/</link>
+    <link>https://deurell.github.io/</link>
     <description>Recent content on Depeche Node&#43;&#43;</description>
     <generator>Hugo - gohugo.io</generator>
     <language>en</language>
     <contact>dev@deurell.net</contact>
     <copyright></copyright>
     
-        <atom:link href="https://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.example.com/</loc>
+    <loc>https://deurell.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.example.com/tags/</loc>
+    <loc>https://deurell.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
