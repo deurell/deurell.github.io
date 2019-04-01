@@ -12,37 +12,5 @@
         <atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Shaders in Defold - The Introduction</title>
-      <link>https://deurell.github.io/posts/defold-shaders-1/</link>
-      <pubDate>Mon, 01 Apr 2019 09:34:06 +0200</pubDate>
-      <author>Mikael Deurell</author>
-      <guid>https://deurell.github.io/posts/defold-shaders-1/</guid>
-      <description></description>
-      
-      <content>&lt;p&gt;Shaders in Defold. The light introduction.&lt;/p&gt;
-</content>
-      
-    </item>
-    
-    <item>
-      <title>Setting up SceneKit with a Shader Modifier</title>
-      <link>https://deurell.github.io/posts/scenekit-1/</link>
-      <pubDate>Mon, 01 Apr 2019 09:17:32 +0200</pubDate>
-      <author>Mikael Deurell</author>
-      <guid>https://deurell.github.io/posts/scenekit-1/</guid>
-      <description></description>
-      
-      <content>
-
-&lt;p&gt;Setting up SceneKit with a Shader Modifier.&lt;/p&gt;
-
-&lt;h2 id=&#34;test&#34;&gt;test&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://deurell.github.io/hugo-logo-wide.svg&#34; alt=&#34;The Image&#34; /&gt;&lt;/p&gt;
-</content>
-      
-    </item>
-    
   </channel>
 </rss>
