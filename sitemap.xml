@@ -3,7 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://deurell.github.io/posts/defold-shaders-1/</loc>
+    <lastmod>2019-04-01T09:34:06+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://deurell.github.io/posts/scenekit-1/</loc>
+    <lastmod>2019-04-01T09:17:32+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://deurell.github.io/</loc>
+    <lastmod>2019-04-01T09:34:06+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://deurell.github.io/posts/</loc>
+    <lastmod>2019-04-01T09:34:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   
