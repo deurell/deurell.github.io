@@ -12,5 +12,33 @@
         <atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Teaching kids game development with PICO-8</title>
+      <link>https://deurell.github.io/posts/crazy-comets/</link>
+      <pubDate>Mon, 08 Apr 2019 22:45:00 +0200</pubDate>
+      <author>Mikael Deurell</author>
+      <guid>https://deurell.github.io/posts/crazy-comets/</guid>
+      <description></description>
+      
+      <content>&lt;p&gt;Growing up I loved to play Crazy Comets on my C64. The magic starfield seemed almost impossible to code for a 14 year old and the music by Rob Hubbard totally blew me away. I decided to code a pico8 remake of it together with my 6 year old daughter in order to show her how to make games. We had a fantastic time!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://deurell.github.io/crazy_intro.gif&#34; alt=&#34;crazy comets intro&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pico8 has the simplicity needed in order to show how everything fits together. Graphics, code, music and effects. You can have a live discussion about game development while coding and showing how things are made. In my ordinary job as a C++ game developer everything takes time, sometimes a lot of time. In Lua and pico8 it&amp;rsquo;s refreshingly fast. Like super, blazingly fast. And at the same time it brings the classic C64 feeling of having control. And what can I say. Kids love pixel art. A perfect teaching environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://deurell.github.io/crazy_game.gif&#34; alt=&#34;crazy comets game&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The game is implemented as a simple state machine with objects handling the ship, comets, star field, camera, particles and missiles. It handles collision detection with classic AABB bounding boxes and I&amp;rsquo;ll come back to some of the implementation in a future blog post. The game has a whopping total size of 11K. &amp;lt;3&lt;/p&gt;
+
+&lt;p&gt;You can download the game with all source code as a cartridge here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://deurell.github.io/cart.p8.png&#34; alt=&#34;cartridge&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Or play the game in a web browser by following the following link.&lt;br /&gt;
+&lt;a href=&#34;https://lexaloffle.com/bbs/?tid=32886&#34;&gt;https://lexaloffle.com/bbs/?tid=32886&lt;/a&gt;&lt;/p&gt;
+</content>
+      
+    </item>
+    
   </channel>
 </rss>

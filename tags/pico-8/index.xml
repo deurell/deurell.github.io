@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Depeche Node</title>
-    <link>https://deurell.github.io/posts/</link>
-    <description>Recent content in Posts on Depeche Node</description>
+    <title>Pico 8 on Depeche Node</title>
+    <link>https://deurell.github.io/tags/pico-8/</link>
+    <description>Recent content in Pico 8 on Depeche Node</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 08 Apr 2019 22:45:00 +0200</lastBuildDate>
     
-	<atom:link href="https://deurell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://deurell.github.io/tags/pico-8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
