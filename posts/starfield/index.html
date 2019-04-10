@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.54.0" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Depeche Node</title>
+<title>Teaching your teen to code a starfield in PICO-8 | Depeche Node</title>
 
 
 
@@ -80,72 +79,115 @@
 </section>
 <section class="section">
   <div class="container">
-    
-    
-    <article>
-      <div class="subtitle tags is-6 is-pulled-right">
-        
-        
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
 <a class="subtitle is-6" href="/tags/pico-8">#pico-8</a>
 
 
 
-        
-      </div>
-      <h2 class="subtitle is-6">April 10, 2019</h2>
-      <h1 class="title"><a href="https://deurell.github.io/posts/starfield/">Teaching your teen to code a starfield in PICO-8</a></h1>
-      <div class="content">
-        Kids love starfields. It&rsquo;s a perfect coding session with a nice visual result and basic highschool math. We&rsquo;re going to build this:
-When coding with kids, always keep it simple and at their level. I know most of you reading this are math wizards but kids tend not to be super impressed by your vector math and matrix calculations (believe me, I&rsquo;ve tried). You&rsquo;re going for quick results and simple code, on their math level.
-        
-        <a class="button is-link" href="https://deurell.github.io/posts/starfield/" style="height:28px">
-          Read more
-        </a>
-        
-      </div>
-    </article>
+      
+    </div>
+    <h2 class="subtitle is-6">April 10, 2019</h2>
+    <h1 class="title">Teaching your teen to code a starfield in PICO-8</h1>
     
-    <article>
-      <div class="subtitle tags is-6 is-pulled-right">
-        
-        
-<a class="subtitle is-6" href="/tags/pico-8">#pico-8</a>
+    <div class="content">
+      <p>Kids love starfields. It&rsquo;s a perfect coding session with a nice visual result and basic highschool math. We&rsquo;re going to build this:</p>
 
+<p><img src="/starfield.gif" alt="starfield" /></p>
 
+<p>When coding with kids, always keep it simple and at their level. I know most of you reading this are math wizards but kids tend not to be super impressed by your vector math and matrix calculations (believe me, I&rsquo;ve tried). You&rsquo;re going for quick results and simple code, on their math level. If you push them too hard you&rsquo;ll loose them to another Overwatch session. We&rsquo;re trying to avoid that.</p>
 
-        
-      </div>
-      <h2 class="subtitle is-6">April 8, 2019</h2>
-      <h1 class="title"><a href="https://deurell.github.io/posts/crazy-comets/">Teaching kids game development with PICO-8</a></h1>
-      <div class="content">
-        Growing up I loved to play Crazy Comets on my C64. The magic starfield seemed almost impossible to code for a 14 year old and the music by Rob Hubbard totally blew me away. I decided to code a pico8 remake of it together with my 6 year old daughter in order to show her how to make games. We had a fantastic time!
-Pico8 has the simplicity needed in order to show how everything fits together.
-        
-        <a class="button is-link" href="https://deurell.github.io/posts/crazy-comets/" style="height:28px">
-          Read more
-        </a>
-        
-      </div>
-    </article>
+<p>A star object is a 3D vector, that&rsquo;s math for a basic x,y,z coordinate in space. [1,2,3] would be a star at x=1, y=2, z=3 in space. We will have a bunch of star objects with random x,y,z coordinates. Since we want them to move towards us we just decrease the z coordinate for each star every frame, keeping their x and y coordinate intact. In order to get it to look like a starfield we simply calculate the x and y screen coordinate by dividing the star x and y coordinate with z. Big z will give us small x and y screen coordinates. Small Z will give us the opposite. We&rsquo;ll keep the x and y coordinates for a star in the range -2500 to 2500 and the z in the range 0 to 150 A quick and dirty perspective divide. That&rsquo;s all the math. It looks like this.</p>
+
+<p><img src="/starfield_debug.gif" alt="starfield debug" /></p>
+
+<p>You can see the x,y,z star coordinates for the star below the star screen coordinates which are just x and y divided by z.</p>
+
+<p>Let&rsquo;s start by adding the following code in the code tab.</p>
+
+<pre><code>-- this is called once when the program starts
+function _init()
+ -- calls our starfield init code and sets up all the stars
+ sf.generate()
+end
+
+-- normal pico8 frame rate is 30
+-- add this function to get 60 fps
+function _update60()
+end
+
+-- called every frame
+function _draw()
+ -- clear screen with black
+ cls(0)
+ -- update the starfield
+ sf.update()
+end
+</code></pre>
+
+<p>We&rsquo;ll put the starfield code in another pico-8 code tab. You can copy and pase the code below.</p>
+
+<pre><code>sf={}
+sf.stars={}
+-- let's have 128 stars
+sf.starcount=128
+-- max z for a star is 150
+sf.maxd=150
+
+sf.generate=function()
+local range=2500
+  --create table with stars
+  for i=1,sf.starcount do
+  	--keep x any y in ranmge -2500 to 2500
+    xp=flr(range-rnd(range*2))
+    yp=flr(range-rnd(range*2))
+    zp=rnd(sf.maxd)
+    add(sf.stars,{x=xp,y=yp,z=zp})
+  end
+end
+
+sf.update=function()
+  for i=1,#sf.stars do
+    sf.stars[i].z=sf.stars[i].z-1
+    if sf.stars[i].z&lt;=0 then
+	  sf.stars[i].z=sf.maxd
+    end
+  end
+  --iterate all the stars
+  for i=1,#sf.stars do
+    --calc star pos xp=x/z yp=y/z
+	local cz=sf.stars[i].z
+	local cx=sf.stars[i].x/cz
+	local cy=sf.stars[i].y/cz
+	--if star is outside sceen
+	--set z position to max dist
+	if cx&lt;-64 or cx&gt;64 then
+	  sf.stars[i].z=sf.maxd
+	end
+	if cy&lt;-64 or cy&gt;64 then
+	  sf.stars[i].z=sf.maxd
+	end
+	--set the color of the star
+	local cols={7,6,5}
+	local ci=1+flr(cz/sf.maxd*#cols)
+	--plot the star
+	  pset(64+cx,64+cy,cols[ci])
+  end
+end
+</code></pre>
+
+<p>And that&rsquo;s it. A star field project in PICO-8. It&rsquo;s a two hour session for a 14 year old including setting up pico-8, explaining basic Lua and writing the project.</p>
+
+<p>PICO-8 is available from here <a href="https://www.lexaloffle.com/pico-8.php">https://www.lexaloffle.com/pico-8.php</a></p>
+
+      
+    </div>
     
   </div>
 </section>
-<section class="section">
-  <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
-  </div>
-</section>
+
+
 
 <section class="section">
   <div class="container has-text-centered">

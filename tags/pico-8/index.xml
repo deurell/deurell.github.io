@@ -6,10 +6,20 @@
     <description>Recent content in Pico 8 on Depeche Node</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Apr 2019 22:45:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 10 Apr 2019 16:59:21 +0200</lastBuildDate>
     
 	<atom:link href="https://deurell.github.io/tags/pico-8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Teaching your teen to code a starfield in PICO-8</title>
+      <link>https://deurell.github.io/posts/starfield/</link>
+      <pubDate>Wed, 10 Apr 2019 16:59:21 +0200</pubDate>
+      
+      <guid>https://deurell.github.io/posts/starfield/</guid>
+      <description>Kids love starfields. It&amp;rsquo;s a perfect coding session with a nice visual result and basic highschool math. We&amp;rsquo;re going to build this:
+When coding with kids, always keep it simple and at their level. I know most of you reading this are math wizards but kids tend not to be super impressed by your vector math and matrix calculations (believe me, I&amp;rsquo;ve tried). You&amp;rsquo;re going for quick results and simple code, on their math level.</description>
+    </item>
     
     <item>
       <title>Teaching kids game development with PICO-8</title>
