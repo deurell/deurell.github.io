@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Recreating Beat Saber lazers with unicorns | Depeche Node</title>
+
+
+
+<link href="https://deurell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Depeche Node" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://deurell.github.io">
+          <h1 class="title is-4">Depeche Node</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile"><a class="level-item" aria-label="twitter" href='https://twitter.com/deurell'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="github" href='https://github.com/deurell'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:dev@deurell.net'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/deurell'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">April 14, 2019</h2>
+    <h1 class="title">Recreating Beat Saber lazers with unicorns</h1>
+    
+    <div class="content">
+      <p>I&rsquo;ve been coding professionally for over 20 years and I still learn new things every single day. One of the most fun and rewarding ways I use to get better is to recreate things in games I love. And I&rsquo;m in love with so many games. It never ends. An endless, lovely, gamedev tutorial!</p>
+
+<p>One of the games I love is Beat Saber. I wanted to recreate it as a VR learning experience on my HTC Vive. It was a really fun journey. The first thing I needed to work out was to find a good way to slice geometries. That kinda sidetracked me for a while. But that&rsquo;s another beautiful story including sliced unicorns, which might just be a future blog post.</p>
+
+<p><img src="/uni.gif" alt="slicing unicorns" /></p>
+
+<p>So, after the mesh slicing was in place I needed lazers. Everyone who has played Beat Saber knows that you need cubes with some kind of lazer material. Turns out creating lazer cubes is a really nice tutorial for shader newbies. We&rsquo;ll base everything on the ShaderModifier source from <a href="https://deurell.github.io/posts/scenekit-setup/">here</a>. The code for this tutorial is in in the same repository but in the <code>lazer</code> branch.</p>
+
+<pre><code>git clone git@github.com:deurell/ShaderModifierLab.git
+git checkout lazer
+</code></pre>
+
+<p>The only change in the ViewController setup is that we use a cube instead of a plane.</p>
+
+<pre><code>let geo = SCNBox(width: 6, height: 6, length: 6, chamferRadius: 1.0)
+</code></pre>
+
+<p>After that we setup the shader to just output the UV coordinates. This is pretty much the starting point for all shader dev work, especially if we have modified the coordinate system. Outputting the UVs with X as red, Y as green and 0 as blue looks like this. You&rsquo;ll remember this as a sign of &ldquo;Oh nice, everything seems to be ok&rdquo;.</p>
+
+<p><img src="/uv.png" alt="uv" /></p>
+
+<p>SceneKit calls UV&rsquo;s Texcoords, just like Unreal, and it stashes them in _surface, in this case in diffureTexcoord. The shaderModifier code looks like this:</p>
+
+<pre><code>#pragma transparent
+#pragma body
+float2 uv = _surface.diffuseTexcoord;
+_output.color.rgb = float3(uv.r, uv.g, 0);
+</code></pre>
+
+<p>The first thing we have to do to turn it into a lazer is adding a fancy sine curve:</p>
+
+<pre><code>float2 uv = _surface.diffuseTexcoord;
+float col = sin(uv.y * M_PI_F);
+_output.color.rgb = float3(col, col, col);
+</code></pre>
+
+<p><img src="/sin.png" alt="sin" /></p>
+
+<p>We only want the first 180 degrees of the sine curve, since we have radians we&rsquo;ll get values from 0-pi rad (0-180 deg).
+The next step will be to invert it and pow it in order to push it to the edges. We want the lazers to be concentrated to the edges of the cube. Like this:</p>
+
+<p><img src="/lazer2.png" alt="lazer" /></p>
+
+<p>Now we&rsquo;ll just need to do the same thing for the horizontal lazers. We also need to merge/lerp the horizontal and vertical lazers as we want lazers on all the edges on the cube. Lerp in shaders is called <code>mix</code> and that&rsquo;s exactly what we want to do. We really want to merge them with a <code>0.5x+0.5y</code> and this is exactly what <code>mix(x,y,0.5)</code>does.</p>
+
+<p>The next step is to pimp the gray lazer with some green color. That&rsquo;s just a multiplication with a green [red=0.2,green=0.9,blue=0.2] vector. A litte dash of whiteness look better so we multiply the final color vector with 8. And that&rsquo;s it! A good enough lazer cube to slice with a light saber! The final shader code looks like this:</p>
+
+<pre><code>#pragma transparent
+#pragma body
+float2 uv = _surface.diffuseTexcoord;
+// horizontal
+float x = 1.0-sin(uv.x*M_PI_F);
+x = pow(x,4) - 0.1;
+// vertical
+float y = 1.0-sin(uv.y*M_PI_F);
+y = pow(y,4)-0.1;
+// interpolate. In this case same as 0.5*x+0.5*y 
+float mx = mix(x,y,0.5);
+float3 col = float3(0.2, 0.9, 0.2) * mx;
+col *= 8.;
+_output.color.rgb = col;
+</code></pre>
+
+<p>And the final result looks like this:</p>
+
+<p><img src="/lazer_res.gif" alt="lazer end result" /></p>
+
+<p>&lt;3</p>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
