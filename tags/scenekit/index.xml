@@ -6,10 +6,20 @@
     <description>Recent content in Scenekit on Depeche Node</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Apr 2019 18:45:31 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2019 15:56:27 +0200</lastBuildDate>
     
 	<atom:link href="https://deurell.github.io/tags/scenekit/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recreating Beat Saber lazers with unicorns</title>
+      <link>https://deurell.github.io/posts/beatlazers/</link>
+      <pubDate>Sun, 14 Apr 2019 15:56:27 +0200</pubDate>
+      
+      <guid>https://deurell.github.io/posts/beatlazers/</guid>
+      <description>I&amp;rsquo;ve been coding professionally for over 20 years and I still learn new things every single day. One of the most fun and rewarding ways I use to get better is to recreate things in games I love. And I&amp;rsquo;m in love with so many games. It never ends. An endless, lovely, gamedev tutorial!
+One of the games I love is Beat Saber. I wanted to recreate it as a VR learning experience on my HTC Vive.</description>
+    </item>
     
     <item>
       <title>Setting up ShaderModifiers in SceneKit</title>
