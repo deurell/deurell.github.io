@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Playgrounds on Depeche Node</title>
+    <link>https://deurell.github.io/tags/playgrounds/</link>
+    <description>Recent content in Playgrounds on Depeche Node</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Apr 2019 18:53:16 +0200</lastBuildDate>
+    
+	<atom:link href="https://deurell.github.io/tags/playgrounds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Metal shader development on an iPad</title>
+      <link>https://deurell.github.io/posts/playground-shaders/</link>
+      <pubDate>Tue, 23 Apr 2019 18:53:16 +0200</pubDate>
+      
+      <guid>https://deurell.github.io/posts/playground-shaders/</guid>
+      <description>The iPad is an amazing learning device. You can read shader books on it. Draw shader ideas on it. And ever since iOS playgrounds got a major boost you can even develop Metal shaders on it using Playgrounds.
+It was the only device I had with me on my easter vacation in the woods. Most of the time was spent like this:
+But you need to catch your breath every once in a while and what could possibly be better than coding shaders on the iPad, in the hammock?</description>
+    </item>
+    
+  </channel>
+</rss>
