@@ -1,25 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Depeche Node</title>
+    <title>Tags on Deurell Labs</title>
     <link>https://deurell.github.io/tags/</link>
-    <description>Recent content in Tags on Depeche Node</description>
+    <description>Recent content in Tags on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Apr 2019 16:59:21 +0200</lastBuildDate>
-    
-	<atom:link href="https://deurell.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Pico 8</title>
-      <link>https://deurell.github.io/tags/pico-8/</link>
-      <pubDate>Wed, 10 Apr 2019 16:59:21 +0200</pubDate>
-      
-      <guid>https://deurell.github.io/tags/pico-8/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 23 Apr 2019 18:53:16 +0200</lastBuildDate><atom:link href="https://deurell.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Playgrounds</title>
       <link>https://deurell.github.io/tags/playgrounds/</link>
@@ -30,7 +17,7 @@
     </item>
     
     <item>
-      <title>Scenekit</title>
+      <title>SceneKit</title>
       <link>https://deurell.github.io/tags/scenekit/</link>
       <pubDate>Tue, 23 Apr 2019 18:53:16 +0200</pubDate>
       
@@ -44,6 +31,15 @@
       <pubDate>Tue, 23 Apr 2019 18:53:16 +0200</pubDate>
       
       <guid>https://deurell.github.io/tags/shaders/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pico-8</title>
+      <link>https://deurell.github.io/tags/pico-8/</link>
+      <pubDate>Wed, 10 Apr 2019 16:59:21 +0200</pubDate>
+      
+      <guid>https://deurell.github.io/tags/pico-8/</guid>
       <description></description>
     </item>
     

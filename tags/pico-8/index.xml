@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Pico 8 on Depeche Node</title>
+    <title>pico-8 on Deurell Labs</title>
     <link>https://deurell.github.io/tags/pico-8/</link>
-    <description>Recent content in Pico 8 on Depeche Node</description>
+    <description>Recent content in pico-8 on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Apr 2019 16:59:21 +0200</lastBuildDate>
-    
-	<atom:link href="https://deurell.github.io/tags/pico-8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 10 Apr 2019 16:59:21 +0200</lastBuildDate><atom:link href="https://deurell.github.io/tags/pico-8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Teaching your teen to code a starfield in PICO-8</title>
       <link>https://deurell.github.io/posts/starfield/</link>
