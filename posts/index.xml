@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Apr 2019 18:53:16 +0200</lastBuildDate><atom:link href="https://deurell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 17:23:40 +0100</lastBuildDate><atom:link href="https://deurell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Realitykit Surface Detection</title>
+      <link>https://deurell.github.io/posts/realitykit-surface-detection/</link>
+      <pubDate>Tue, 03 Jan 2023 17:23:40 +0100</pubDate>
+      
+      <guid>https://deurell.github.io/posts/realitykit-surface-detection/</guid>
+      <description>I&amp;rsquo;ve spent a lot of time learning and writing code based on RealityKit. I really like the framework. It&amp;rsquo;s nicely written, has a lovely tiny, lightweight ECS implementation and makes writing AR applications and games pretty straightforward. I thought I&amp;rsquo;d write down some things I&amp;rsquo;ve learned in a series of blog posts that might help other AR devs out there in the wild.
+The first thing that comes up when writing a new RealityKit app is detecting surfaces in order to anchor virtual objects in the real world.</description>
+    </item>
+    
     <item>
       <title>Metal shader development on an iPad</title>
       <link>https://deurell.github.io/posts/playground-shaders/</link>
