@@ -6,7 +6,18 @@
     <description>Recent content in Swift on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Jan 2023 17:23:40 +0100</lastBuildDate><atom:link href="https://deurell.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 11:15:08 +0100</lastBuildDate><atom:link href="https://deurell.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using the RealityKit AnchorEntity</title>
+      <link>https://deurell.github.io/posts/realitykit-anchorentity/</link>
+      <pubDate>Fri, 13 Jan 2023 11:15:08 +0100</pubDate>
+      
+      <guid>https://deurell.github.io/posts/realitykit-anchorentity/</guid>
+      <description>We spent last post learning how ARKit anchors work and how they relate to RealityKit entities. In the end we wrote our own RealityKit AnchorEntity based on the results of the ARSessions provided ARAnchors. This is all fine but if we just need a quick anchor we can use the RealityKit provided AnchorEntity.
+We start the same way by setting up an ARSession. Requesting horizontal plane detection.
+private func setupARSession() { let session = self.</description>
+    </item>
+    
     <item>
       <title>Realitykit Surface Detection</title>
       <link>https://deurell.github.io/posts/realitykit-surface-detection/</link>
