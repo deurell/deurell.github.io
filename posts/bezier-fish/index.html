@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Adding Bezier animations to RealityKit | Deurell Labs</title>
+
+
+
+<link href="https://deurell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Deurell Labs">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://deurell.github.io/posts/bezier-fish/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://deurell.github.io">
+          <h1 id="nav-heading" class="title is-4">Deurell Labs</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"><a class="level-item" aria-label="twitter" href='https://twitter.com/deurell'
+            target='_blank' rel='me noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a><a class="level-item" aria-label="github" href='https://github.com/deurell'
+            target='_blank' rel='me noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg>
+</i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:dev@deurell.net'
+            target='_blank' rel='me noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg>
+</i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/deurell'
+            target='_blank' rel='me noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg>
+</i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/swift/">#Swift</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/realitykit/">#RealityKit</a>
+  
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">January 17, 2023</h2>
+    <h1 class="title">Adding Bezier animations to RealityKit</h1>
+    
+    <div class="content">
+      <p>I love animation systems. I wrote animation systems for the C64 and Amiga in the 80&rsquo;s and 90&rsquo;s, for fashion designer apps at H&amp;M, for games like Candy Crush and god knows how many more. RealityKit has a nice and user friendly animation system that can handle different linear world space transforms, play model space animations from usdz models and combine them in sequences or groups.
+<img src="/animation-resouce.jpeg" alt="animation-resource">
+RealityKit entities can play an AnimationResource with the playAnimation method and AnimationResources are created from AnimationDefinitions. The simplest example is a linear translate animation.</p>
+<pre tabindex="0"><code>let animationDefinition = FromToByAnimation(to: Transform(translation: [1, 0, 0]), 
+    duration: 2.0, 
+    bindTarget: .transform)
+let animationResource = try! AnimationResource.generate(with: animationDefinition)
+fishEntity.playAnimation(animationResource)
+</code></pre><p>This will create an AnimationDefinition that translates the enitity one meter on the X axis in two seconds.  The AnimationDefinition is bound to a target, this target can be a property or as in this case the Transform matrix of the entity. You then create an AnimationResource based on the definition and play in on the entity.</p>
+<p>One thing is missing though. A tool that I almost always use is simple quadratic or cubic bezier animations and there is no ready-to-go packaged way of doing this in RealityKit. You can roll your own and run it in the system game loop but it&rsquo;s nice to be able to handle them in the same way as all other RealityKit animations. This way you get support for fire and forget playing, grouping and sequencing animations and all the other nice things that are provided by the framework.</p>
+<p>The easiest way of doing this is an extension method to AnimationResource. RealityKit includes a SampledAnimation class that takes an array of keyframes and creates an AnimationDefinition based on those provided frames. If you set the tween mode to .linear it will interpolate between the keyframes and if you pick a nice enough number of keyframes, write a simple Bezier function to generate the frames you have Bezier animation based on the RealityKit SampledAnimation class ready to go. I wrote one and you use it like this:</p>
+<pre tabindex="0"><code> let bezierAnimationResource = AnimationResource.quadracticBezierAnimation(start: Constants.fishStartPosition, 
+    control: [0, 0.4, 0],
+    end: Constants.fishEndPosition,
+    step: 0.025,
+    speed: 4.7,
+    timingFunction: AnimationResource.quadraticEaseInOut)
+</code></pre><p>This makes it possible to play world space Bezier transformations on an entity while at the same time playing a usdz provided model space animation. A pretty common scenario for games and apps. Hope this helps!</p>
+<p><img src="/bezier-fish.gif" alt="bezier-fish"></p>
+<p>All code for this blog post is available <a href="https://github.com/deurell/SurfaceDetection/tree/bezier">here</a>. Have an excellent AR dev day!</p>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+  </div>
+</section>
+
+
+
+
+
+</body>
+</html>
+
