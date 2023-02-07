@@ -6,7 +6,16 @@
     <description>Recent content on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Jan 2023 10:15:35 +0100</lastBuildDate><atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 12:47:16 +0100</lastBuildDate><atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Controlling AR-entities with an iPhone</title>
+      <link>https://deurell.github.io/posts/realitykit-interaction/</link>
+      <pubDate>Tue, 07 Feb 2023 12:47:16 +0100</pubDate>
+      
+      <guid>https://deurell.github.io/posts/realitykit-interaction/</guid>
+      <description>I once worked on adding support for hands tracking for an existing VR game on the Oculus Quest2. Moving from controllers to just using your hands made me think about interaction design in VR/AR in a new way. The dream scenario would be to just do the same thing as with controllers, but with hands. That would be fast, cheap and fancy, right? Turns out it worked but wasn&amp;rsquo;t very fun, and didn&amp;rsquo;t spark joy.</description>
+    </item>
+    
     <item>
       <title>Adding Bezier animations to RealityKit</title>
       <link>https://deurell.github.io/posts/bezier-fish/</link>
