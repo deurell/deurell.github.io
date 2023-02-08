@@ -6,7 +6,16 @@
     <description>Recent content on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Feb 2023 12:47:16 +0100</lastBuildDate><atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Feb 2023 10:05:04 +0100</lastBuildDate><atom:link href="https://deurell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RoomPlan using SwiftUI</title>
+      <link>https://deurell.github.io/posts/roomplan-swiftui/</link>
+      <pubDate>Wed, 08 Feb 2023 10:05:04 +0100</pubDate>
+      
+      <guid>https://deurell.github.io/posts/roomplan-swiftui/</guid>
+      <description>I spent almost a year working with VR/AR for a pretty big game company. They make some great games, mostly in Unity and for the Oculus Quest range of headsets. Some of the games needed to mark out the surrounding play area and obstacles manually in order to start playing. Really nice games but that startup process was quite tedious. When I saw the RoomPlan session at WWDC I had this idea to get rid of the manual setup and instead use one of the players iPhones, map out the surrounding area with RoomPlan, sync it with the headset and then anchor it in the game.</description>
+    </item>
+    
     <item>
       <title>Controlling AR-entities with an iPhone</title>
       <link>https://deurell.github.io/posts/realitykit-interaction/</link>

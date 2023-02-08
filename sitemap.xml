@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://deurell.github.io/</loc>
+    <lastmod>2023-02-08T10:05:04+01:00</lastmod>
+  </url><url>
+    <loc>https://deurell.github.io/posts/</loc>
+    <lastmod>2023-02-08T10:05:04+01:00</lastmod>
+  </url><url>
+    <loc>https://deurell.github.io/posts/roomplan-swiftui/</loc>
+    <lastmod>2023-02-08T10:05:04+01:00</lastmod>
+  </url><url>
+    <loc>https://deurell.github.io/tags/swift/</loc>
+    <lastmod>2023-02-08T10:05:04+01:00</lastmod>
+  </url><url>
+    <loc>https://deurell.github.io/tags/swiftui/</loc>
+    <lastmod>2023-02-08T10:05:04+01:00</lastmod>
+  </url><url>
+    <loc>https://deurell.github.io/tags/</loc>
+    <lastmod>2023-02-08T10:05:04+01:00</lastmod>
+  </url><url>
     <loc>https://deurell.github.io/posts/realitykit-interaction/</loc>
     <lastmod>2023-02-07T12:47:16+01:00</lastmod>
   </url><url>
-    <loc>https://deurell.github.io/</loc>
-    <lastmod>2023-02-07T12:47:16+01:00</lastmod>
-  </url><url>
-    <loc>https://deurell.github.io/posts/</loc>
-    <lastmod>2023-02-07T12:47:16+01:00</lastmod>
-  </url><url>
     <loc>https://deurell.github.io/tags/realitykit/</loc>
-    <lastmod>2023-02-07T12:47:16+01:00</lastmod>
-  </url><url>
-    <loc>https://deurell.github.io/tags/swift/</loc>
-    <lastmod>2023-02-07T12:47:16+01:00</lastmod>
-  </url><url>
-    <loc>https://deurell.github.io/tags/</loc>
     <lastmod>2023-02-07T12:47:16+01:00</lastmod>
   </url><url>
     <loc>https://deurell.github.io/posts/bezier-fish/</loc>
