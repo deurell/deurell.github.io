@@ -6,7 +6,16 @@
     <description>Recent content in RealityKit on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Feb 2023 12:47:16 +0100</lastBuildDate><atom:link href="https://deurell.github.io/tags/realitykit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Feb 2023 10:54:06 +0100</lastBuildDate><atom:link href="https://deurell.github.io/tags/realitykit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RealityKit &lt;3 PencilKit</title>
+      <link>https://deurell.github.io/posts/pencilkit/</link>
+      <pubDate>Fri, 10 Feb 2023 10:54:06 +0100</pubDate>
+      
+      <guid>https://deurell.github.io/posts/pencilkit/</guid>
+      <description>I had this idea of creating a collaborative AR experience where friends could draw and create art together. I made a small prototype just to play with the format and how it would feel on an iOS device while learning to combine RealityKit and the pretty amazing PencilKit. At this point it mostly serves as a demo of how to integrate RealityKit and PencilKit in a nice way but who knows what will happen in the future.</description>
+    </item>
+    
     <item>
       <title>Controlling AR-entities with an iPhone</title>
       <link>https://deurell.github.io/posts/realitykit-interaction/</link>
