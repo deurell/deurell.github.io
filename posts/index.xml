@@ -14,7 +14,7 @@
       
       <guid>https://deurell.github.io/posts/adventure/</guid>
       <description>While working on a project, I found myself crafting a super simple text-based adventure engine. Once the core mechanics were in place, it struck me that this could double as a nice Swift tutorial. So, for those who&amp;rsquo;ve fond memories of classics like &amp;ldquo;Zork&amp;rdquo; and &amp;ldquo;Hobbit&amp;rdquo;, join me in recreating that magic. We&amp;rsquo;ll employ JSON to map out our game world and then use Swift to animate our adventures.
-1. Our Game&amp;rsquo;s Blueprint: JSON The game&amp;rsquo;s structure will be described in a structured JSON format:</description>
+1. Our Game&amp;rsquo;s Blueprint: JSON The game&amp;rsquo;s structure is described in a structured JSON format.</description>
     </item>
     
     <item>

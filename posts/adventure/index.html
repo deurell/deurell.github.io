@@ -91,6 +91,19 @@
   <div class="container">
     <div class="subtitle tags is-6 is-pulled-right">
       
+      
+<a class="subtitle is-6" href="/tags/swift/">#Swift</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/c&#43;&#43;/">#C&#43;&#43;</a>
+  
+  | <a class="subtitle is-6" href="/tags/tutorial/">#Tutorial</a>
+  
+
+
+      
     </div>
     <h2 class="subtitle is-6">August 20, 2023</h2>
     <h1 class="title">Crafting a Text-Based Adventure Game in Swift</h1>
@@ -98,18 +111,47 @@
     <div class="content">
       <p>While working on a project, I found myself crafting a super simple text-based adventure engine. Once the core mechanics were in place, it struck me that this could double as a nice Swift tutorial. So, for those who&rsquo;ve fond memories of classics like &ldquo;Zork&rdquo; and &ldquo;Hobbit&rdquo;, join me in recreating that magic. We&rsquo;ll employ JSON to map out our game world and then use Swift to animate our adventures.</p>
 <h2 id="1-our-games-blueprint-json">1. Our Game&rsquo;s Blueprint: JSON</h2>
-<p>The game&rsquo;s structure will be described in a structured JSON format:</p>
+<p>The game&rsquo;s structure is described in a structured JSON format. To create a new game we just feed the engine new JSON. It supports rooms, items, and paths:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;startingRoom&#34;</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;rooms&#34;</span>: [
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;startingRoom&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;rooms&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;You are in a dimly lit stone chamber. The walls are cold to the touch, and the air is damp. To the north, you spot an old wooden door. In the center of the room, there&#39;s a mysterious chest that seems to have a keyhole.&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;paths&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;north&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;roomID&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;isLocked&#34;</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;items&#34;</span>: [
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;In a mystical forest...&#34;</span>,
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;paths&#34;</span>: { <span style="color:#f92672">&#34;north&#34;</span>: { <span style="color:#f92672">&#34;roomID&#34;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#f92672">&#34;isLocked&#34;</span>: <span style="color:#66d9ef">false</span> } },
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;items&#34;</span>: []
-</span></span><span style="display:flex;"><span>        },
-</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">...</span>
-</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;chest&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A large wooden chest with intricate designs. It&#39;s locked and seems to need a key.&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;useEffects&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;silver key&#34;</span>: <span style="color:#e6db74">&#34;The chest unlocks and inside you find treasures beyond your wildest dreams!&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;You&#39;ve entered a small room. It seems like a storage chamber of sorts. Old crates and dusty shelves line the walls. Sunlight pierces through a small crack in the ceiling. On a table in the corner, you notice a shiny silver key.&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;paths&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;south&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;roomID&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;isLocked&#34;</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;items&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;silver key&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A shiny silver key with intricate engravings on it.&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;useEffects&#34;</span>: {}
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="2-translating-json-to-swift-structures">2. Translating JSON to Swift Structures</h2>
 <p>To map our JSON to Swift, we use Codable structures:</p>
@@ -163,7 +205,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>This function checks if a particular item in the player&rsquo;s inventory can be used in the current room.</p>
 <h2 id="5-command-parsing-logic">5. Command Parsing Logic</h2>
-<p>Understanding and executing player&rsquo;s commands is crucial. Here&rsquo;s a look at the parsing logic:</p>
+<p>Understanding and executing player&rsquo;s commands is the simple brain of the game. Since this is a simple engine there won&rsquo;t be a fancy command implementation. Just the code that felt fun and right when I typed it. Here&rsquo;s a look at the parsing logic:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleCommand</span>(<span style="color:#66d9ef">_</span> command: String) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> tokens = command.split(separator: <span style="color:#e6db74">&#34; &#34;</span>).map(String.<span style="color:#66d9ef">init</span>)
 </span></span><span style="display:flex;"><span>    
@@ -199,6 +241,8 @@
 </span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>By melding the principles of Swift with the nostalgia of text-based games, you&rsquo;ve created a fresh adventure. Now, armed with this foundation, you can craft even more intricate worlds and narratives. Enjoy your coding journey!</p>
 <p>You can find all code for this adventure <a href="https://github.com/deurell/adventure">here</a>.</p>
+<p>Oh&hellip; And since I&rsquo;ve spent a lifetime writing C++, here&rsquo;s a C++ version of the same <a href="https://github.com/deurell/simple_adventure">game</a>. It uses modern C++ in a way i like and the excellent <a href="https://github.com/nlohmann/json">nlohmann/json parser</a> for super easy JSON functionality. Always interesting to see the differences between the two implementations.</p>
+<p><img src="/adventure.png" alt="Adventure"></p>
 
       
     </div>
