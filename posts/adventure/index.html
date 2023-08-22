@@ -113,69 +113,96 @@
 <h2 id="1-our-games-blueprint-json">1. Our Game&rsquo;s Blueprint: JSON</h2>
 <p>The game&rsquo;s structure is described in a structured JSON format. To create a new game we just feed the engine new JSON. It supports rooms, items, and paths:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;startingRoom&#34;</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;rooms&#34;</span>: [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;You are in a dimly lit stone chamber. The walls are cold to the touch, and the air is damp. To the north, you spot an old wooden door. In the center of the room, there&#39;s a mysterious chest that seems to have a keyhole.&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;paths&#34;</span>: {
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;north&#34;</span>: {
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;roomID&#34;</span>: <span style="color:#ae81ff">2</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;isLocked&#34;</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      },
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;items&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;startingRoom&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;rooms&#34;</span>: [
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;chest&#34;</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A large wooden chest with intricate designs. It&#39;s locked and seems to need a key.&#34;</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;useEffects&#34;</span>: {
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;silver key&#34;</span>: <span style="color:#e6db74">&#34;The chest unlocks and inside you find treasures beyond your wildest dreams!&#34;</span>
-</span></span><span style="display:flex;"><span>          }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      ]
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">2</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;You&#39;ve entered a small room. It seems like a storage chamber of sorts. Old crates and dusty shelves line the walls. Sunlight pierces through a small crack in the ceiling. On a table in the corner, you notice a shiny silver key.&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;paths&#34;</span>: {
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;south&#34;</span>: {
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;roomID&#34;</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;isLocked&#34;</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      },
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;items&#34;</span>: [
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;You are in the entrance hall of an ancient temple. The floor is dusty, and the atmosphere is eerily silent. Cobwebs are in every corner.&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;paths&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;north&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;roomID&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;isLocked&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;items&#34;</span>: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Gem&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A shiny blue gem that seems to emit a faint glow.&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;useEffects&#34;</span>: {
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&#34;gemEffect&#34;</span>: {
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;originatingRoomID&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;target&#34;</span>: <span style="color:#e6db74">&#34;Chest&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;action&#34;</span>: <span style="color:#e6db74">&#34;open&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;You place the gem into a slot on the chest. It creaks open, revealing a stash of gold coins!&#34;</span>
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Key&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A rusty old key.&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;useEffects&#34;</span>: {
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&#34;keyEffect&#34;</span>: {
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;originatingRoomID&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;target&#34;</span>: <span style="color:#e6db74">&#34;north&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;action&#34;</span>: <span style="color:#e6db74">&#34;unlock&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;You hear a click as the door to the north unlocks.&#34;</span>
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;characters&#34;</span>: []
+</span></span><span style="display:flex;"><span>        },
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;silver key&#34;</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A shiny silver key with intricate engravings on it.&#34;</span>,
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;useEffects&#34;</span>: {}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;You find yourself in a grand chamber, illuminated by torches. There&#39;s an ornate chest in the middle of the room.&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;paths&#34;</span>: {},
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;items&#34;</span>: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Chest&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A large, ornate chest with intricate carvings. It seems to have a slot for something.&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#34;useEffects&#34;</span>: {}
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;characters&#34;</span>: []
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      ]
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="2-translating-json-to-swift-structures">2. Translating JSON to Swift Structures</h2>
 <p>To map our JSON to Swift, we use Codable structures:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Item</span>: Codable {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> name: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> description: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> useEffects: [String: UseEffect]?
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Path</span>: Codable {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> roomID: Int
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> isLocked: Bool
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">UseEffect</span>: Codable {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> action: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> message: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> originatingRoomID: Int?
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> target: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> action: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> message: String
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Path</span>: Codable {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> roomID: Int
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> isLocked: Bool
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Item</span>: Codable {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> name: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> description: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> useEffects: [String: UseEffect]?
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Character</span>: Codable {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> name: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> dialogue: String
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Room</span>: Codable {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> id: Int
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> description: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> paths: [String: Path]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> items: [Item]
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> id: Int
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> description: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> paths: [String: Path]
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> items: [Item]
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> characters: [Character]?
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">GameData</span>: Codable {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> startingRoom: Int
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> rooms: [Room]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="3-parsing-the-game-data-json-to-swift">3. Parsing the Game Data: JSON to Swift</h2>
 <p>Leveraging Swift&rsquo;s <code>Codable</code> protocol, we can effortlessly transform JSON into Swift structures:</p>
@@ -185,63 +212,63 @@
 <h2 id="4-interacting-with-the-game-world">4. Interacting with the Game World</h2>
 <p>Our game world is alive with items to use and paths to take. Here&rsquo;s how we manage these interactions:</p>
 <h3 id="picking-up-items">Picking Up Items</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">pickUpItem</span>(<span style="color:#66d9ef">_</span> itemName: String, <span style="color:#66d9ef">in</span> roomID: Int) -&gt; Bool {
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>    playerInventory.append(room.items[index])
-</span></span><span style="display:flex;"><span>    ...
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getItem</span>(named itemName: String) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> index = gameRooms[currentRoomID]?.items.firstIndex(<span style="color:#66d9ef">where</span>: { $0.name == itemName }) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> item = gameRooms[currentRoomID]?.items.remove(at: index) {
+</span></span><span style="display:flex;"><span>            playerInventory.append(item)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;You picked up the </span><span style="color:#e6db74">\(</span>itemName<span style="color:#e6db74">)</span><span style="color:#e6db74">.&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;There&#39;s no </span><span style="color:#e6db74">\(</span>itemName<span style="color:#e6db74">)</span><span style="color:#e6db74"> here to pick up.&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="using-items--traversing-paths">Using Items &amp; Traversing Paths</h3>
 <p>Items can have various effects in the game, like unlocking doors:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">useItem</span>(<span style="color:#66d9ef">_</span> itemName: String) {
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> useEffect.action {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;unlockDoor&#34;</span>:
-</span></span><span style="display:flex;"><span>            ...
-</span></span><span style="display:flex;"><span>            room.paths[direction]?.isLocked = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>            ...
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Unexpected action.&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">useItem</span>(named itemName: String) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> playerInventory.contains(<span style="color:#66d9ef">where</span>: { $0.name == itemName }) {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;You used the </span><span style="color:#e6db74">\(</span>itemName<span style="color:#e6db74">)</span><span style="color:#e6db74">.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> useEffect = gameRooms[currentRoomID]?.items.compactMap({ $0.useEffects?[itemName] }).first {
+</span></span><span style="display:flex;"><span>            print(useEffect)
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Nothing happens.&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;You don&#39;t have a </span><span style="color:#e6db74">\(</span>itemName<span style="color:#e6db74">)</span><span style="color:#e6db74"> in your inventory.&#34;</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>This function checks if a particular item in the player&rsquo;s inventory can be used in the current room.</p>
 <h2 id="5-command-parsing-logic">5. Command Parsing Logic</h2>
 <p>Understanding and executing player&rsquo;s commands is the simple brain of the game. Since this is a simple engine there won&rsquo;t be a fancy command implementation. Just the code that felt fun and right when I typed it. Here&rsquo;s a look at the parsing logic:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleCommand</span>(<span style="color:#66d9ef">_</span> command: String) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> tokens = command.split(separator: <span style="color:#e6db74">&#34; &#34;</span>).map(String.<span style="color:#66d9ef">init</span>)
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> tokens[<span style="color:#ae81ff">0</span>] {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleCommand</span>(<span style="color:#66d9ef">_</span> rawCommand: String) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> command = resolveAlias(rawCommand)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> commandParts = command.split(separator: <span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> commandParts[<span style="color:#ae81ff">0</span>] {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;look&#34;</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> room = gameRooms[currentRoomID] <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> }
-</span></span><span style="display:flex;"><span>        lookAround(room: room)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;go&#34;</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> tokens.count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span> { print(<span style="color:#e6db74">&#34;Go where?&#34;</span>) }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            move(inDirection: tokens[<span style="color:#ae81ff">1</span>])
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;pick&#34;</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> tokens.count <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>, tokens[<span style="color:#ae81ff">1</span>] == <span style="color:#e6db74">&#34;up&#34;</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">let</span> itemName = tokens.dropFirst(<span style="color:#ae81ff">2</span>).joined(separator: <span style="color:#e6db74">&#34; &#34;</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> pickUpItem(itemName, <span style="color:#66d9ef">in</span>: currentRoomID) {
-</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#34;You picked up the </span><span style="color:#e6db74">\(</span>itemName<span style="color:#e6db74">)</span><span style="color:#e6db74">.&#34;</span>)
-</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#34;There&#39;s no </span><span style="color:#e6db74">\(</span>itemName<span style="color:#e6db74">)</span><span style="color:#e6db74"> here.&#34;</span>)
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> currentRoom = gameRooms[currentRoomID] {
+</span></span><span style="display:flex;"><span>            lookAround(<span style="color:#66d9ef">in</span>: currentRoom)
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;use&#34;</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> tokens.count <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">let</span> itemName = tokens.dropFirst().joined(separator: <span style="color:#e6db74">&#34; &#34;</span>)
-</span></span><span style="display:flex;"><span>            useItem(itemName)
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        useItem(named: String(commandParts[<span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;go&#34;</span>:
+</span></span><span style="display:flex;"><span>        go(String(commandParts[<span style="color:#ae81ff">1</span>]))
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;inventory&#34;</span>:
-</span></span><span style="display:flex;"><span>        displayInventory()
+</span></span><span style="display:flex;"><span>        showInventory()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;get&#34;</span>:
+</span></span><span style="display:flex;"><span>        getItem(named: String(commandParts[<span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;quit&#34;</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Goodbye!&#34;</span>)
+</span></span><span style="display:flex;"><span>        exit(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;talk&#34;</span>, <span style="color:#e6db74">&#34;to&#34;</span>:
+</span></span><span style="display:flex;"><span>        talkToCharacter(named: String(commandParts[<span style="color:#ae81ff">2</span>]))
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;I don&#39;t understand.&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;I don&#39;t understand that command.&#34;</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>By melding the principles of Swift with the nostalgia of text-based games, you&rsquo;ve created a fresh adventure. Now, armed with this foundation, you can craft even more intricate worlds and narratives. Enjoy your coding journey!</p>
-<p>You can find all code for this adventure <a href="https://github.com/deurell/adventure">here</a>.</p>
-<p>Oh&hellip; And since I&rsquo;ve spent a lifetime writing C++, here&rsquo;s a C++ version of the same <a href="https://github.com/deurell/simple_adventure">game</a>. It uses modern C++ in a way i like and the excellent <a href="https://github.com/nlohmann/json">nlohmann/json parser</a> for super easy JSON functionality. Always interesting to see the differences between the two implementations.</p>
+<p>You can find all code for this adventure <a href="https://github.com/deurell/adventure">here</a> packaged as a SPM package ready for coding in VSCode or XCode!</p>
+<p>Oh&hellip; And since I&rsquo;ve spent a lifetime writing C++, here&rsquo;s a C++ version of the same <a href="https://github.com/deurell/swiftadventure">game</a>. It uses modern C++ in a way i like and the excellent <a href="https://github.com/nlohmann/json">nlohmann/json parser</a> for super easy JSON functionality. Always interesting to see the differences between the two implementations.</p>
 <p><img src="/adventure.png" alt="Adventure"></p>
 
       
