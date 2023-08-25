@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Deurell Labs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Aug 2023 14:19:38 +0200</lastBuildDate><atom:link href="https://deurell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 14:05:24 +0200</lastBuildDate><atom:link href="https://deurell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Prototype to the Next Phase</title>
+      <link>https://deurell.github.io/posts/from-prototype-to-the-next-phase/</link>
+      <pubDate>Fri, 25 Aug 2023 14:05:24 +0200</pubDate>
+      
+      <guid>https://deurell.github.io/posts/from-prototype-to-the-next-phase/</guid>
+      <description>Starting a new project often comes with the desire for perfection right from the get-go. However, I&amp;rsquo;ve always found immense value in beginning with a rough prototype, whether it was for my recent multiplayer Unreal 5 networking implementation gig for a First Person Shooter, fancy Candy Crush features, or that quirky AR game I spent way too much time and energy on. My latest endeavor? A super simple text adventure game engine.</description>
+    </item>
+    
     <item>
       <title>Crafting a Text-Based Adventure Game in Swift</title>
       <link>https://deurell.github.io/posts/adventure/</link>
